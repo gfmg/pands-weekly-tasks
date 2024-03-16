@@ -16,6 +16,8 @@
 i1 = int(input("Enter amount 1 (in cent): ")) #input1: interger
 i2 = int(input("Enter amount 2 (in cent): ")) #input2: integer 
 
-res = (i1 + i2)/100 # Sum the two inputs together and divide by a hundred
+res = (i1 + i2)/100 
 
-print(f"The total amount= \N{euro sign}{res}") # Return the the formatted text with a euro sign and the res
+print(f"The total amount= \N{euro sign}{res}")
+
+#print "Please pay %s"%(u"\N{euro sign}")

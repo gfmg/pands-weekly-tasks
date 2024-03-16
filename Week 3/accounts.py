@@ -13,7 +13,6 @@
 anum = str(input("Please enter your account number: ")) #Account number
 
 numlen=len(anum)
-
 ans=anum[-4:] #Last four digits
 x="X"*(numlen-4) # X repeated the length of the bank account minus 4
 
