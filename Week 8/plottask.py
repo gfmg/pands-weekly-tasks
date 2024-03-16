@@ -22,7 +22,7 @@ fonty = {'color':'black','size':12,'weight':'bold'}
 # A histogram of a normal distribution of a 1000 values with a mean of 5 and standard deviation of 2, 
 dat = np.random.normal(loc=5,scale=2,size=1000)
 
-plt.figure(figsize = (10, 10))
+plt.figure(figsize = (5, 5))
 plt.hist(dat,color="blue",edgecolor="black")
 plt.axvline(x=dat.mean(),color="red",linestyle='dashed') #plot vertical line as the mean
 # Following lines are plot formatting
@@ -37,7 +37,7 @@ plt.show()
 x = np.array(np.arange(0,10,0.2)) #numpy range function to define numbers as floats
 y = x ** 3
 
-plt.figure(figsize = (10, 10))
+plt.figure(figsize = (5, 5))
 plt.plot(x,y,label="$Y: x^3$")
 #Following lines are plot formatting
 plt.title("Cubic function",  fontdict = fontdtitle)
