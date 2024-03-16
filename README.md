@@ -1,1 +1,1 @@
-# pands-weekly-tasks
+This github repository contains the weekly tasks done by Guillermo F. Martin Gonzalez for the "Programming and Scripting" course as part of the Higher Diploma in Science in Data Analytics from the Atlantic Techinical University. 
