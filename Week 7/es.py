@@ -8,13 +8,14 @@
 @Personal email : gfmg1992@hotmail.com
 @Student email: G00438885@atu.ie
 @License :   (C)Copyright 2023, Guillermo Martin
-@Desc    :   Reading a file and output the number of e's it contains
+@Desc    :   Weekly Task 7. Reading a file and output the number of e's it contains
 '''
 
-import os
-import sys
+import os #import package os
+import sys #import package sys
 
-# Piece of code from real python: https://realpython.com/command-line-interfaces-python-argparse/
+# Idea and process flow on how to do it from: https://realpython.com/command-line-interfaces-python-argparse/
+
 # Argument 1 is the name of the file es.py
 # Argument 2 is the name of the .txt file we want to open
 # So, in terminal "python es.py week7text.py" is a total of 2 arguments....
@@ -30,11 +31,12 @@ elif args_count < 2:
 FILENAME= sys.argv[1] # Argument 1 in the command line is our FILENAME. 
                       # Argument 0 is es.py
 
-if os.path.exists(FILENAME):
-    with open(FILENAME,'r') as f:
-        data=f.read()
-        # Count the number of e's in data
-        out=data.count('e')
-        print(f'The characer "e" appears a total of {out} times in the file "{FILENAME}"')
-else:
-    print(f'Error: File "{FILENAME}" does not exist')
+# Now, we will check that the FILENAME path exists! To do so, we will use the try:, except functions we see later in the course
+try: 
+    with open(FILENAME,'r') as f: #read the file.name and call it f. With statement closes the file for us "https://www.freecodecamp.org/news/with-open-in-python-with-statement-syntax-example/"
+        out=f.read().count('e') #Read f and count the number of "e's" it contains. Assign to object out to print it later
+        print(f'The character "e" appears a total of {out} times in the file "{FILENAME}"')
+except OSError as e: #If the filename does not exist, raise a file or directory error. Info taken: https://www.topbug.net/blog/2020/10/03/catching-filenotfounderror-watch-out/
+    print(e) #Print the error
+    sys.exit(1) #Stops the programme
+

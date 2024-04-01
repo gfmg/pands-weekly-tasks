@@ -9,37 +9,37 @@
 @Personal email : gfmg1992@hotmail.com
 @Student email: G00438885@atu.ie
 @License :   (C)Copyright 2023, Guillermo Martin
-@Desc    :   Weekly task 8
+@Desc    :   Weekly task 8. Learning how to plot plot
 '''
 
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy as np #Import package numpy as "np"
+import matplotlib.pyplot as plt #Import package matplotlib.pyplot as "plt"
 
 # Default fonts for the title, x and y axis
 fontdtitle = {'color':'black','size':20,'weight':'bold'}
 fontx = {'color':'black','size':12,'weight':'bold'}
 fonty = {'color':'black','size':12,'weight':'bold'}
 
-# Grid for plots
+# Grid for plots. 2 subplots of size 7x7
 fig, axs = plt.subplots(2, figsize=(7, 7))
 
 # A histogram of a normal distribution of a 1000 values with a mean of 5 and standard deviation of 2, 
 dat = np.random.normal(loc=5,scale=2,size=1000)
 
 #axs[0].figure(figsize = (5, 5))
-axs[0].hist(dat,color="blue",edgecolor="black")
+axs[0].hist(dat,color="blue",edgecolor="black") #Assign histogram to the axs[0] subplot defined above!
 axs[0].axvline(x=dat.mean(),color="red",linestyle='dashed',label='Mean: {:.5f}'.format(dat.mean())) #plot vertical line as the mean
 # Following lines are plot formatting
 axs[0].set_title("A random normal sample",  fontdict = fontdtitle)
 axs[0].set_ylabel('Y',fontdict = fontx)
 axs[0].set_xlabel('X',fontdict = fonty)
 axs[0].legend()
-min_ylim, max_ylim = axs[0].set_ylim()
+#min_ylim, max_ylim = axs[0].set_ylim()
 #axs[0].text(x=dat.mean()*1.1, y=max_ylim*0.95, s='Mean: {:.5f}'.format(dat.mean()),color="red",size=12)
 
 # And a plot of the function  h(x)=x3 in the range 0 to 10, 
 x = np.array(np.arange(0,10,0.2)) #numpy range function to define numbers as floats
-y = x ** 3
+y = x ** 3 #y is the cubic function (**) of x
 
 axs[1].plot(x,y,label="$Y: x^3$")
 #Following lines are plot formatting
